@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './App.css';
-import LoginView from './views/LoginView.js'
+import SignInOutContainer from './containers';
 
 function App() {
   return (
     <div className="App">
-      <LoginView />
+      <SignInOutContainer/>
     </div>
   );
 }
