@@ -41,7 +41,7 @@ const handleChange = (event, newValue) => {
                 <Tab label="Regístrarse" />
             </Tabs>
             <TabPanel value={value} index={0}>
-                <LoginView/>
+                <LoginView handleChange = {handleChange}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <SignupView/>

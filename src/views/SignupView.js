@@ -15,7 +15,7 @@ import Stack from '@mui/material/Stack';
 
 const SignupView = ( ) => {
     const headerStyle = { margin: 0 }
-    const avatarStyle = { backgroundColor: '#1bbd7e' }
+    const avatarStyle = { backgroundColor: '#0078AA' }
     const marginTop = { marginTop: 5 }
     return (
         <Grid>

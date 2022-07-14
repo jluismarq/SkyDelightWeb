@@ -9,7 +9,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 
-const LoginView = ( ) => {
+const LoginView = ({handleChange}) => {
 
     const [login,setLogin]=React.useState({email:"",password:""})
     const handleEvent=(event)=>{setLogin(previewLogin=>({...previewLogin,[event.target.id]:event.target.value}))}
@@ -31,14 +31,14 @@ const LoginView = ( ) => {
                     <FormControlLabel sx={{margin:"0 auto"}} control={<Checkbox defaultChecked />} label="Mantener sesión iniciada" /> 
                 </Grid>
                 
-                <Button fullWidth variant="contained" onClick={submit} style={{margin:"8px"}}>Iniciar Sesión</Button>
+                <Button  variant="contained" onClick={submit} style={{margin:"8px"}}>Iniciar Sesión</Button>
               
                 <Typography style={{margin:"8px"}}>
                     <Link href="#" underline="hover">¿Ólvidaste tu contraseña?</Link>
                 </Typography>   
 
                <Typography style={{margin:"8px"}}> 
-                    <Link href="#" underline="hover">¿No tienes cuenta?</Link> 
+                    <Link href="#" underline="hover" onClick={()=>handleChange("event",1)}>¿No tienes cuenta?</Link> 
                </Typography>
                
 
