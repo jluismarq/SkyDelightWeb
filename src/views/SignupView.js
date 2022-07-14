@@ -10,6 +10,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import Stack from '@mui/material/Stack';
 
 
 const SignupView = ( ) => {
@@ -20,9 +21,7 @@ const SignupView = ( ) => {
         <Grid>
             <Paper elevation = {20} style={{padding:"50px", height:"60vh", width:"280px", margin:"50px auto"}}>
                 <Grid align='center'>
-                    <Avatar style={avatarStyle}>
-               
-                    </Avatar>
+                    <Avatar style={avatarStyle}></Avatar>
                     <h2 style={headerStyle}>Crea una cuenta nueva</h2>
                     <Typography variant='caption' gutterBottom>Llena los siguientes campos para registrarte</Typography>
                 </Grid>
@@ -36,7 +35,9 @@ const SignupView = ( ) => {
                             <FormControlLabel value="Masculino" control={<Radio />} label="Masculino" />
                         </RadioGroup>
                     </FormControl>
-        
+                    <Stack component="form" noValidate spacing={3}>
+                        <TextField fullWidth id="date" label="Fecha de Nacimiento" type="date" defaultValue="2017-05-24" InputLabelProps={{shrink: true,}}/>
+                    </Stack>
                     <TextField fullWidth label='Contraseña' placeholder="Ingrese su contraseña" margin="dense"/>
                     <TextField fullWidth label='Confirme su Contraseña' placeholder="Confirme su contraseña" margin="dense"/>
                     <Button type='submit' variant='contained' color='primary' margin="dense">Regístrame</Button>
