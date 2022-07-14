@@ -19,7 +19,7 @@ function TabPanel(props) {
         {...other}
       >
         {value === index && (
-          <Box sx={{ p: 3 }}>
+          <Box>
             <Typography>{children}</Typography>
           </Box>
         )}
@@ -35,10 +35,10 @@ const handleChange = (event, newValue) => {
   };
 
     return(
-        <Paper square>
+        <Paper elevation={20} style= {{width:380, margin:"0px auto"}}>
             <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
-                <Tab label="Active" />
-                <Tab label="Active" />
+                <Tab label="Iniciar Sesión" />
+                <Tab label="Regístrarse" />
             </Tabs>
             <TabPanel value={value} index={0}>
                 <LoginView/>

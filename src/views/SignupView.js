@@ -19,7 +19,7 @@ const SignupView = ( ) => {
     const marginTop = { marginTop: 5 }
     return (
         <Grid>
-            <Paper elevation = {20} style={{padding:"50px", height:"60vh", width:"280px", margin:"50px auto"}}>
+            <Paper style={{padding:"50px", height:"60vh", width:"280px", margin:"0 auto"}}>
                 <Grid align='center'>
                     <Avatar style={avatarStyle}></Avatar>
                     <h2 style={headerStyle}>Crea una cuenta nueva</h2>
@@ -30,17 +30,17 @@ const SignupView = ( ) => {
                     <TextField fullWidth required label='Email' placeholder="Ingresa tu email" margin="dense" />
                     <FormControl component="fieldset" style={marginTop}>
                         <FormLabel component="legend">Sexo:</FormLabel>
-                        <RadioGroup aria-label="gender" name="gender" style={{ display: 'initial' }}>
+                        <RadioGroup aria-label="gender" name="gender" style={{ display: 'initial'}} >
                             <FormControlLabel value="Femenino" control={<Radio />} label="Femenino" />
                             <FormControlLabel value="Masculino" control={<Radio />} label="Masculino" />
                         </RadioGroup>
                     </FormControl>
                     <Stack component="form" noValidate spacing={3}>
-                        <TextField fullWidth id="date" label="Fecha de Nacimiento" type="date" defaultValue="2017-05-24" InputLabelProps={{shrink: true,}}/>
+                        <TextField fullWidth id="date" label="Fecha de Nacimiento" margin="dense" type="date" defaultValue="2017-05-24" InputLabelProps={{shrink: true,}}/>
                     </Stack>
                     <TextField fullWidth label='Contraseña' placeholder="Ingrese su contraseña" margin="dense"/>
                     <TextField fullWidth label='Confirme su Contraseña' placeholder="Confirme su contraseña" margin="dense"/>
-                    <Button type='submit' variant='contained' color='primary' margin="dense">Regístrame</Button>
+                    <Button type='submit' variant='contained' color='primary' style={{margin:"8px"}}>Regístrame</Button>
                 </form>
             </Paper>
         </Grid>

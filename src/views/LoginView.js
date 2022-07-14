@@ -17,7 +17,7 @@ const LoginView = ( ) => {
 
     return (
         <Grid container id="main-container">
-            <Paper elevation = {20} style={{padding:"50px", height:"60vh", width:"280px", margin:"50px auto"}}>
+            <Paper style={{padding:"50px", height:"60vh", width:"280px", margin:"0 auto"}}>
 
                 <Grid item align='center'>
                     <img className="logo" src={logo} alt="SkyDelight" />
