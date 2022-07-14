@@ -35,7 +35,7 @@ const handleChange = (event, newValue) => {
   };
 
     return(
-        <Paper elevation={20} style= {{width:380, margin:"0px auto"}}>
+        <Paper elevation={20} style= {{width:380, margin:"60px auto"}}>
             <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
                 <Tab label="Iniciar Sesión" />
                 <Tab label="Regístrarse" />
