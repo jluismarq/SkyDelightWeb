@@ -37,10 +37,11 @@ const handleChange = (event, newValue) => {
 
     return(
         <Paper elevation={20} style= {{width:380, margin:"60px auto"}}>
-            <Tabs value={value} onChange={handleChange} centered>
+            <Tabs value={value} onChange={handleChange} centered variant="scrollable"
+  scrollButtons="auto">
                 <Tab label="Iniciar Sesión" />
                 <Tab label="Regístrarse" />
-                <Tab label="Forgot" />
+                <Tab label="Recuperar Contraseña" />
             </Tabs>
             <TabPanel value={value} index={0}>
                 <LoginView handleChange = {handleChange}/>
