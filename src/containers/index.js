@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import LoginView from '../views/LoginView';
 import SignupView from '../views/SignupView';
+import ForgotView from '../views/ForgotView';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -39,12 +40,16 @@ const handleChange = (event, newValue) => {
             <Tabs value={value} onChange={handleChange} centered>
                 <Tab label="Iniciar Sesión" />
                 <Tab label="Regístrarse" />
+                <Tab label="Forgot" />
             </Tabs>
             <TabPanel value={value} index={0}>
                 <LoginView handleChange = {handleChange}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <SignupView/>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                <ForgotView/>
             </TabPanel>
         </Paper>
        
