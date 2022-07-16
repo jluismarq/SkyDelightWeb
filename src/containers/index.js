@@ -7,9 +7,6 @@ import Box from '@mui/material/Box'
 import LoginView from '../views/LoginView';
 import SignupView from '../views/SignupView';
 import ForgotView from '../views/ForgotView';
-import LoginIcon from '@mui/icons-material/Login';
-import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
-import KeyIcon from '@mui/icons-material/Key';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -39,20 +36,21 @@ const handleChange = (event, newValue) => {
   };
 
     return(
-        <Paper elevation={20} style= {{width:500, margin:"60px auto"}}>
-            <Tabs value={value} onChange={handleChange}  style={{textTransform: 'none'}} centered>
-                <Tab label="Iniciar Sesión" style={{textTransform: 'none'}} icon={<LoginIcon />} />
-                <Tab label="Regístrarse" style={{textTransform: 'none'}} icon={<AssignmentTurnedInIcon />} />
-                <Tab label="Recuperar Contraseña" style={{textTransform: 'none'}} icon={<KeyIcon />}/>
+        <Paper elevation={0} style= {{width:400, margin:"60px auto"}}>
+            <Tabs value={value} onChange={handleChange}  style={{textTransform: 'none'}} variant="scrollable"
+  scrollButtons="auto" selectionFollowsFocus>
+                <Tab label="Iniciar Sesión" style={{textTransform: 'none'}} />
+                <Tab label="Regístrarse" style={{textTransform: 'none'}} />
+                <Tab label="Recuperar Contraseña" style={{textTransform: 'none'}}/>
             </Tabs>
             <TabPanel value={value} index={0}>
                 <LoginView handleChange = {handleChange}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <SignupView/>
+                <SignupView handleChange = {handleChange}/>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <ForgotView/>
+                <ForgotView handleChange = {handleChange}/>
             </TabPanel>
         </Paper>
        

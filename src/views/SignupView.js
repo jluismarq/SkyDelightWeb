@@ -11,15 +11,15 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Stack from '@mui/material/Stack';
+import Link from '@mui/material/Link';
 
-
-const SignupView = ( ) => {
+const SignupView = ({handleChange}) => {
     const headerStyle = { margin: 0 }
     const avatarStyle = { backgroundColor: '#0078AA' }
     const marginTop = { marginTop: 5 }
     return (
         <Grid>
-            <Paper style={{padding:"50px", height:"60vh", width:"400px", margin:"0 auto"}}>
+            <Paper style={{padding:"50px", height:"60vh", width:"280px", margin:"0 auto"}}>
                 <Grid align='center'>
                     <Avatar style={avatarStyle}></Avatar>
                     <h2 style={headerStyle}>Crea una cuenta nueva</h2>
@@ -42,6 +42,9 @@ const SignupView = ( ) => {
                     <TextField fullWidth label='Confirme su Contraseña' placeholder="Confirme su contraseña" margin="dense"/>
                     <Button type='submit' variant='contained' color='primary' style={{margin:"8px", textTransform: 'none'}}>Regístrame</Button>
                 </form>
+                <Typography style={{margin:"8px"}} align="right">
+                    <Link href="#" underline="hover" onClick={()=>handleChange("event",0)} >¿Ya tienes una cuenta?</Link>
+                </Typography> 
             </Paper>
         </Grid>
     );

@@ -17,7 +17,7 @@ const LoginView = ({handleChange}) => {
 
     return (
         <Grid container id="main-container">
-            <Paper style={{padding:"50px", height:"60vh", width:"500px", margin:"0 auto"}}>
+            <Paper style={{padding:"50px", height:"60vh", width:"280px", margin:"0 auto"}}>
 
                 <Grid item align='center'>
                     <img className="logo" src={logo} alt="SkyDelight" />
@@ -32,15 +32,14 @@ const LoginView = ({handleChange}) => {
                 </Grid>
                 
                 <Button  variant="contained" onClick={submit} style={{margin:"8px", textTransform: 'none'}} >Iniciar Sesión</Button>
+
+                <Typography style={{margin:"8px"}}> 
+                    <Link href="#" underline="hover" onClick={()=>handleChange("event",1)}>¿No tienes cuenta?</Link> 
+               </Typography>
               
                 <Typography style={{margin:"8px"}}>
                     <Link href="#" underline="hover" onClick={()=>handleChange("event",2)}>¿Ólvidaste tu contraseña?</Link>
-                </Typography>   
-
-               <Typography style={{margin:"8px"}}> 
-                    <Link href="#" underline="hover" onClick={()=>handleChange("event",1)}>¿No tienes cuenta?</Link> 
-               </Typography>
-               
+                </Typography>               
 
                    
             </Paper>
