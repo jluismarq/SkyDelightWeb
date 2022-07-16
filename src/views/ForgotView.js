@@ -10,10 +10,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 const ForgotView = ( ) => {
     const headerStyle = { margin: 0 }
     const avatarStyle = { backgroundColor: '#0078AA' }
-    {/*const marginTop = { marginTop: 5 }*/}
+    const marginTop = { marginTop: 5 }
     return (
         <Grid>
-            <Paper style={{padding:"50px", height:"60vh", width:"280px", margin:"0 auto"}}>
+            <Paper style={{padding:"50px", height:"60vh", width:"400px", margin:"0 auto"}}>
                 <Grid align='center'>
                     <Avatar style={avatarStyle}><LockOutlinedIcon /></Avatar>
                     <h2 style={headerStyle}>Recuperar Contraseña</h2>
@@ -21,7 +21,7 @@ const ForgotView = ( ) => {
                 </Grid>
                 <form>
                     <TextField fullWidth required label='Email' placeholder="Ingresa tu email" margin="dense" />
-                    <Button type='submit' variant='contained' color='primary' style={{margin:"8px"}}>Recuperar</Button>
+                    <Button type='submit' variant='contained' color='primary' style={{margin:"8px", textTransform: 'none'}}>Recuperar</Button>
                 </form>
             </Paper>
         </Grid>

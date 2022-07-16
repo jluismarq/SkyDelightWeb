@@ -19,7 +19,7 @@ const SignupView = ( ) => {
     const marginTop = { marginTop: 5 }
     return (
         <Grid>
-            <Paper style={{padding:"50px", height:"60vh", width:"280px", margin:"0 auto"}}>
+            <Paper style={{padding:"50px", height:"60vh", width:"400px", margin:"0 auto"}}>
                 <Grid align='center'>
                     <Avatar style={avatarStyle}></Avatar>
                     <h2 style={headerStyle}>Crea una cuenta nueva</h2>
@@ -40,7 +40,7 @@ const SignupView = ( ) => {
                     </Stack>
                     <TextField fullWidth label='Contraseña' placeholder="Ingrese su contraseña" margin="dense"/>
                     <TextField fullWidth label='Confirme su Contraseña' placeholder="Confirme su contraseña" margin="dense"/>
-                    <Button type='submit' variant='contained' color='primary' style={{margin:"8px"}}>Regístrame</Button>
+                    <Button type='submit' variant='contained' color='primary' style={{margin:"8px", textTransform: 'none'}}>Regístrame</Button>
                 </form>
             </Paper>
         </Grid>
