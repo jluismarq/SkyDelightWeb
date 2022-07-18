@@ -41,7 +41,7 @@ const handleChange = (event, newValue) => {
   scrollButtons="auto" selectionFollowsFocus>
                 <Tab label="Iniciar Sesión" style={{textTransform: 'none'}} />
                 <Tab label="Regístrarse" style={{textTransform: 'none'}} />
-                <Tab label="Recuperar Contraseña" style={{textTransform: 'none'}}/>
+                <Tab label="Recuperar Contraseña" style={{textTransform: 'none'}} />
             </Tabs>
             <TabPanel value={value} index={0}>
                 <LoginView handleChange = {handleChange}/>
